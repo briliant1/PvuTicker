@@ -1,0 +1,5 @@
+dnspython
+discord.py
+requests
+discord-py-slash-command
+web3
