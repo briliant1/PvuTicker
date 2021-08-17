@@ -1,5 +1,4 @@
 dnspython
 discord.py
-requests
+httpx
 discord-py-slash-command
-web3

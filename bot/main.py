@@ -1,7 +1,7 @@
 import os, random, asyncio
 import discord
 from discord.ext import commands
-import requests
+import httpx
 from discord_slash import SlashCommand, SlashContext
 
 client = commands.Bot(command_prefix=".")
@@ -19,7 +19,7 @@ async def on_ready():
 
 
 def getCoingeckoData():
-    response = requests.get(coingecko)
+    response = httpx.get(coingecko)
     data = response.json()
     return data
 
