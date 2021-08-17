@@ -19,9 +19,10 @@ async def on_ready():
 
 
 def getCoingeckoData():
-    response = httpx.get(coingecko)
-    data = response.json()
-    return data
+    with httpx.Client(timeout=None) as httpx_client:
+        response = httpx_client.get(coingecko)
+        data = response.json()
+        return data
 
 
 def getPvuPerUSD():
