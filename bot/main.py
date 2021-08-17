@@ -4,7 +4,7 @@ from discord.ext import commands
 import httpx
 from discord_slash import SlashCommand, SlashContext
 
-client = commands.Bot(command_prefix=".")
+client = commands.Bot(command_prefix=";")
 slash = SlashCommand(client, sync_commands=True)
 
 coingecko = "https://api.coingecko.com/api/v3/simple/price?ids=plant-vs-undead-token&vs_currencies=usd,idr,bnb"
